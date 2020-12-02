@@ -8,13 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-//import javax.validation.constraints.NotNull;
-//import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
-import com.sun.istack.NotNull;
-
 
 @Entity
 @Table(name = "postagem")
@@ -24,11 +21,11 @@ public class Postagem {
 	private Long id;
 	
 	@NotNull
-	//@Size(min = 5, max = 100)
+	@Size(min = 5, max = 100)
 	private String titulo;
 	
 	@NotNull
-	//@Size(min = 10, max = 500)
+	@Size(min = 10, max = 500)
 	private String texto;
 	
 	@Temporal(TemporalType.TIMESTAMP)
